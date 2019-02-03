@@ -1,0 +1,298 @@
+body {
+  position: relative;
+  width: 100vw;
+  text-align: center;
+  background-color: #1b1b1b;
+  color: #fffff7;
+  margin: 0;
+  padding: 0;
+}
+
+#layout-container{
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem;
+  width: 100vw;
+  text-align: center;
+  background-color: #1b1b1b;
+  color: #fffff7;
+}
+
+.layoutTopPadding{
+  padding-top: 85px;
+}
+
+/* PAGE HEADER AND NAV TRAY STYLES */
+#header_container {
+  position: fixed;
+  height: 60px;
+  line-height: 60px;
+  width: 100vw;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  border: 2px #1b1b1b solid;
+  background-color: #424242;
+  font-family: 'Oswald', sans-serif;
+}
+
+#band_name_container {
+  display: inline-flex;
+  justify-content: center;
+}
+
+#band_name{
+  font-size: 1.9rem;
+  font-family: 'Limelight', 'cursive';
+}
+
+.band_name_word {
+  display: inline;
+  margin: 0 5px;
+}
+
+#band_name:hover {
+  text-shadow: 1px 1px rgba(27, 27, 27, 0.8);
+  color: #fff9c4;
+}
+
+#nav_tray {
+  position: fixed;
+  top: 60px;
+  height: 35px;
+  width: 100vw;
+  box-sizing: border-box;
+  line-height: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgba(27, 27, 27, 0.8);
+  z-index:2;
+}
+
+#toggle_nav_tray {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 50px;
+  line-height: 55px;
+  width: 50px;
+  z-index:3;
+  float: left;
+  cursor: pointer;
+  padding-top: 8px;
+  padding-right: 5px;
+  padding-left: 10px;
+}
+
+#toggle_nav_tray img:hover {
+  color: #fff9c4;
+  transform: scale(1.1);
+}
+
+a {
+  text-decoration: none;
+  color: #fffff7;
+}
+
+.nav-link:hover {
+  color: #fff9c4;
+  transform: scale(1.1);
+}
+/* AUDIO PLAYER STYLES */
+#audio_container {
+  position: absolute;
+  right: 40px;
+  width: 170px;
+  height: 60px;
+  line-height: 60px;
+}
+
+.audio-player-volume{
+  display:none;
+}
+
+#play:hover, #rewind:hover, #forward:hover {
+  transform: scale(1.1)!important;
+}
+
+/* HERO IMAGE STYLES */
+.hero-image {
+  width: 100vw;
+  max-width: 1200px;
+  opacity: 0.8;
+  border: 1px black solid;
+  margin-bottom: -5px;
+}
+
+/* SECTION DIVIDER HEADING STYLES */
+.divider-heading {
+  height: 40px;
+  line-height: 40px;
+  font-size: 1.4rem;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  background-color: #424242;
+  font-family: 'Limelight', cursive;
+}
+
+/* PAGE FOOTER STYLES */
+#page-footer {
+  margin-top: 20px;
+  padding: 25px;
+  background-color: #424242;
+}
+
+#email {
+  margin-left: 20px;
+}
+
+#footer-logo {
+  margin-top: 10px;
+}
+
+/* BIOGRAPHY STYLES */
+.headshot {
+  border: 3px #fffff7 solid;
+  margin-top: 25px;
+  opacity: 0.7
+}
+
+.bio-text {
+  width: 60vw;
+  margin: 0 auto;
+}
+
+/* PHOTOS SECTION STYLES */
+#photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 350px));
+  grid-gap: 5vw;
+  margin-left: 40px;
+  margin-top: 80px;
+  justify-content: center;
+}
+
+.photos-image {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  max-width: 100%;
+}
+
+/* MEDIA PAGE STYLES */
+#album_list li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.album_cover {
+  border: 1px solid black;
+}
+
+.album_cover:hover {
+  box-shadow: 1px 1px 1px 1px rgba(255, 249, 196, 0.2);
+}
+
+/* CONTACT PAGE STYLES */
+#contact-container {
+  min-height: 90vh;
+}
+
+#contact-form {
+  height: 40vh;
+  min-height: 350px;
+}
+
+#contact-form input, #contact-form textarea {
+  width: 50vw;   
+}
+
+[type='email'], [type='text'] {
+  height: 25px;
+  background-color: #fffff7;
+}
+
+textarea {
+  height: 20vh;
+  resize: none;
+  background-color: #fffff7;
+}
+
+form[name="mailing-list"] {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  height: 20vh;
+  min-height: 100px;
+}
+
+.btn {
+  position: relative;
+
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+
+  overflow: hidden;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  
+  background-color: #2ecc71;
+  color: #ecf0f1;
+  
+  transition: background-color .3s;
+}
+
+.social-link:hover, .btn:hover {
+  box-shadow: 1px 2px 2px 1px rgba(255, 249, 196, 0.2);
+  transform: scale(1.05);
+  border-radius: 5px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Limelight|Oswald:300');
+
+@media only screen and (max-width: 800px) {
+  /* add mobile styles here */
+  #header_container{
+    height: 50px;
+    line-height: 45px;
+  }
+  #band_name{
+      font-size: 1.2rem;
+  }
+  .audio-container{
+    height: 45px;
+  }
+  #play{
+    float: right;
+    z-index: 10;
+  }
+  .audio-player-track-name, #rewind-icon, #forward-icon {
+    display: none;
+  }
+  .divider-heading {
+      font-size: 1rem;
+  }
+  #toggle_nav_tray {
+      padding-left: 5px;
+      line-height: 45px;
+  }
+  #nav_tray {
+      top: 50px;
+  }
+  iframe {
+      width: 95vw;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  #audio_container{
+    display: none;
+  }
+}
+
