@@ -56,7 +56,7 @@ export default class PageHeader extends Component {
                             <p className="band_name_word">Tourists -</p>
                         </Link>
                 </span>
-                <span id="audio_container">
+                <div id="audio_container">
                     <AudioPlayer 
                             audioFiles={tracks}
                             fontColor={'white'}
@@ -75,7 +75,7 @@ export default class PageHeader extends Component {
                             hideRewind
                             rearrange={rearrangePlayer}
                         />
-                </span>
+                </div>
                 {this.state.show_nav && (
                     <div id='nav_tray'>
                         <Link className='nav-link' id='nav-media' to="/media/">{'- Media -'}</Link>
@@ -120,21 +120,21 @@ const rearrangePlayer = [
       className: "audio-container",
       style: { fontFamily: 'Oswald', fontSize: '0.9rem'},
       innerComponents: [
-          {
-              type: 'name',
-              style: {width: "100px", overflow: 'scroll'}
-           },
+        //   {
+        //       type: 'name',
+        //       style: {width: "100px", overflow: 'scroll'}
+        //    },
           { 
               type: 'rewind',
-              style: {width: "30px"}
+              style: {width: "70px"}
           },
           { 
               type: 'play',
-              style: {width: "30px"}
+              style: {width: "70px"}
            },
           { 
               type: 'forward',
-              style: {width: "30px"}
+              style: {width: "70px"}
            },
       ]
   }

@@ -102,12 +102,16 @@ a {
 }
 /* AUDIO PLAYER STYLES */
 #audio_container {
-  position: absolute;
-  right: 40px;
-  width: 170px;
-  height: 60px;
-  line-height: 60px;
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
+
+.audio_container {}
+
+.audio_player {}
 
 .audio-player-volume{
   display:none;
@@ -258,7 +262,7 @@ form[name="mailing-list"] {
 
 @media only screen and (max-width: 800px) {
   /* add mobile styles here */
-  #header_container{
+  /* #header_container{
     height: 50px;
     line-height: 45px;
   }
@@ -287,12 +291,12 @@ form[name="mailing-list"] {
   }
   iframe {
       width: 95vw;
-  }
+  } */
 }
 
 @media only screen and (max-width: 500px){
-  #audio_container{
+  /* #audio_container{
     display: none;
-  }
+  } */
 }
 
