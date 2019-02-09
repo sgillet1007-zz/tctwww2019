@@ -10,12 +10,12 @@ import pause from '../images/icons/pause.png'
 import forward from '../images/icons/forward.png'
 import rewind from '../images/icons/rewind.png'
 
-import shes_coming_back from '../tracks/shes_coming_back.mp3'
-import inspector_clousso from '../tracks/inspector_clousso.mp3'
+// import shes_coming_back from '../tracks/shes_coming_back.mp3'
+// import inspector_clousso from '../tracks/inspector_clousso.mp3'
 import satan from '../tracks/satan.mp3'
-import in_the_city from '../tracks/in_the_city.mp3'
-import rufus from '../tracks/rufus.mp3'
-import tocame from '../tracks/tocame.mp3'
+// import in_the_city from '../tracks/in_the_city.mp3'
+// import rufus from '../tracks/rufus.mp3'
+// import tocame from '../tracks/tocame.mp3'
 
 export default class PageHeader extends Component {
     constructor(props) {
@@ -90,29 +90,15 @@ export default class PageHeader extends Component {
 
 const tracks = [
     {
+        src: 'http://soundsilk.com/wp-content/uploads/2016/01/SoundSilk-Drum-cowbell.mp3',
+        title: 'Cowbell 1'
+    }, {
+        src: 'http://dight310.byu.edu/media/audio/FreeLoops.com/2/2/Cowbell%20Hit-8994-Free-Loops.com.mp3',
+        title: 'Cowbell 2'
+    }, {
         src: satan,
         title: 'Satan Inc.'
     },
-    {
-        src: shes_coming_back,
-        title: 'She\'s Coming Back'
-    },
-    {
-        src: inspector_clousso,
-        title: 'Inspector Clousso'
-    },
-    {
-        src: rufus,
-        title: 'Rufus'
-    },
-    {
-        src: in_the_city,
-        title: 'In The City'
-    },
-    {
-        src: tocame,
-        title: 'Tocame'
-    }
 ]
 
 const rearrangePlayer = [

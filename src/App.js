@@ -18,6 +18,8 @@ import postcards from './images/albums/postcards.jpg'
 import fb from './images/social/fb.jpg'
 import ig from './images/social/ig.jpg'
 
+import satan from './tracks/satan.mp3'
+
 const albumItem = props => {
     const {title, year, image_url, cdbaby_url} = props;
     return ( <li key={year}>
@@ -102,6 +104,7 @@ class App extends Component {
 const Home = () => (
     <div>
         <img className='hero-image' src={hero} alt="" />
+        <audio src={satan} preload="auto"  controls></audio>
         <UpcomingShows />
         <BandBios />
     </div>
