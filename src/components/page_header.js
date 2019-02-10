@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import expand_menu from '../images/icons/expand_menu.png'
 import expand_less from '../images/icons/expand_less.png'
 
+import satan from '../tracks/satan.mp3'
+
 export default class PageHeader extends Component {
     constructor(props) {
         super(props)
@@ -43,6 +45,9 @@ export default class PageHeader extends Component {
                             <p className="band_name_word">Tourists -</p>
                         </Link>
                 </span>
+                <div>
+                    <audio src={satan} preload="auto" controls></audio>
+                </div>
                 {this.state.show_nav && (
                     <div id='nav_tray'>
                         <Link className='nav-link' id='nav-media' to="/media/">{'- Media -'}</Link>
