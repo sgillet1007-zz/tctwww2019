@@ -5,6 +5,12 @@ import PageFooter from './components/page_footer'
 import PageHeader from './components/page_header'
 import Photos from './components/photos'
 
+import AudioPlayer from 'react-modular-audio-player';
+import play_arrow from './images/icons/play_arrow.png'
+import pause from './images/icons/pause.png'
+import forward from './images/icons/forward.png'
+import rewind from './images/icons/rewind.png'
+
 import expand_menu from './images/icons/expand_menu.png'
 import expand_less from './images/icons/expand_less.png'
 import hero from "./images/hero.jpg"
@@ -19,6 +25,44 @@ import fb from './images/social/fb.jpg'
 import ig from './images/social/ig.jpg'
 
 import satan from './tracks/satan.mp3'
+
+const tracks = [
+    {
+        src: 'http://soundsilk.com/wp-content/uploads/2016/01/SoundSilk-Drum-cowbell.mp3',
+        title: 'Cowbell 1'
+    }, {
+        src: 'http://dight310.byu.edu/media/audio/FreeLoops.com/2/2/Cowbell%20Hit-8994-Free-Loops.com.mp3',
+        title: 'Cowbell 2'
+    }, {
+        src: satan,
+        title: 'Satan Inc.'
+    },
+]
+
+const rearrangePlayer = [
+  {
+      className: "audio-container",
+      style: { fontFamily: 'Oswald', fontSize: '0.9rem'},
+      innerComponents: [
+        //   {
+        //       type: 'name',
+        //       style: {width: "100px", overflow: 'scroll'}
+        //    },
+          { 
+              type: 'rewind',
+              style: {width: "100px"}
+          },
+          { 
+              type: 'play',
+              style: {width: "100px"}
+           },
+          { 
+              type: 'forward',
+              style: {width: "100px"}
+           },
+      ]
+  }
+]
 
 const albumItem = props => {
     const {title, year, image_url, cdbaby_url} = props;
@@ -104,9 +148,30 @@ class App extends Component {
 const Home = () => (
     <div>
         <img className='hero-image' src={hero} alt="" />
-        <audio src={satan} preload="auto"  controls></audio>
+        {/* <audio src={satan} preload="auto"></audio> */}
         <UpcomingShows />
         <BandBios />
+        <DividerHeading headerText={'Cowbell'} />
+        <div id="audio-container">
+            <AudioPlayer 
+                audioFiles={tracks}
+                fontColor={'white'}
+                fontSize={'1em'}
+                iconSize={'2em'}
+                playIcon={play_arrow}
+                playHoverIcon={play_arrow}
+                pauseIcon={pause}
+                pauseHoverIcon={pause}
+                forwardIcon={forward}
+                forwardHoverIcon={forward}
+                rewindIcon={rewind}
+                rewindHoverIcon={rewind}
+                hideSeeking
+                hideLoop
+                hideRewind
+                rearrange={rearrangePlayer}
+            />
+        </div>
     </div>
 )
 
